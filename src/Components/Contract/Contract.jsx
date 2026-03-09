@@ -25,7 +25,7 @@ const Contract = () => {
         <div className="contact-text text-center md:text-left flex flex-col items-center md:items-start">
           <div className="avatar-glow relative mb-6">
             <div className="absolute inset-0 bg-[color:var(--app-glow)] blur-3xl rounded-full scale-150"></div>
-            <img src="avatar.png" className="relative w-32 h-32 sm:w-40 sm:h-40 z-10 rounded-full object-cover" alt="Avatar" />
+            <img src="" className="relative w-32 h-32 sm:w-40 sm:h-40 z-10 rounded-full object-cover" alt="Avatar" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">Got a project?</h2>
           <p className="text-[color:var(--app-muted)] max-w-xs">
@@ -66,7 +66,7 @@ const Contract = () => {
       <footer className="border-t border-[color:var(--app-border)] px-4 sm:px-6 lg:px-10 py-10 mt-12 sm:mt-16 lg:mt-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
           <div className="footer-col">
-            <h4 className="font-bold mb-4">Morfolio</h4>
+            <h4 className="font-bold mb-4">portfolio</h4>
             <p className="text-xs text-[color:var(--app-muted)]">At dignissim morbi erat vestibulum...</p>
           </div>
           <div className="footer-col">

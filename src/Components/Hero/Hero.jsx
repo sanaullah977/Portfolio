@@ -84,8 +84,11 @@ const Hero = () => {
                 bg-[color:var(--app-accent)] hover:bg-[color:var(--app-accent-hover)]
                 text-white shadow-[0_0_40px_var(--app-glow-strong)] transition-colors"
               >
-                Let&apos;s Talk <span className="text-xl">→</span>
+                Let's Talk <span className="text-xl">→</span>
               </a>
+              <span>
+                <a ></a>
+              </span>
             </div>
           </div>
 

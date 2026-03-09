@@ -22,10 +22,12 @@ const Services = () => {
       duration: 1,
       stagger: 0.2,
       ease: "power3.out",
+      
       scrollTrigger: {
-        trigger: container.current,
-        start: "top 80%",
-      }
+  trigger: container.current,
+  start: "top 60%",
+   // scroll এর সাথে animation smooth হবে
+}
     });
   }, { scope: container });
 

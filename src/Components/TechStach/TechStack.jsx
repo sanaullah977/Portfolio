@@ -27,31 +27,36 @@ const TechStack = () => {
   ];
 
   // GSAP Animation Implementation
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top 80%", // Starts when the top of the section hits 80% of the viewport
-      }
-    });
+ useGSAP(() => {
 
-    // Animate the cards upwards
-    tl.from(".skill-card", {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out"
-    })
-    // Stagger the individual skill items popping in
-    .from(".skill-item", {
-      scale: 0.8,
-      opacity: 0,
-      duration: 0.4,
-      stagger: 0.05,
-      ease: "back.out(1.7)"
-    }, "-=0.4");
-  }, { scope: container });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container.current,
+      start: "top 85%",
+      end: "bottom 60%",
+      // scrub: 1.2,
+      toggleActions: "play none none reverse",
+    }
+  });
+
+  tl.from(".skill-card", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.15,
+    ease: "expo.out",
+    force3D: true
+  })
+  .from(".skill-item", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.05,
+    ease: "back.out(1.2)",
+    force3D: true
+  }, "-=0.5");
+
+}, { scope: container });
 
   return (
     <section
