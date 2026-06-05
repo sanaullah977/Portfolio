@@ -115,7 +115,7 @@ const Hero = () => {
                 bg-[color:var(--app-accent)] text-white px-4 sm:px-5 py-3 sm:py-4
                 rounded-2xl z-20 shadow-[0_18px_40px_rgba(0,0,0,0.35)]"
               >
-                <h4 className="text-lg sm:text-xl font-bold">100.36k</h4>
+                <h4 className="text-lg sm:text-xl font-bold">15+</h4>
                 <p className="text-[11px] sm:text-xs opacity-90">
                   Package project done
                 </p>

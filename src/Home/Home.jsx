@@ -16,6 +16,7 @@ import Hero from "../Components/Hero/Hero";
 import Contract from "../Components/Contract/Contract";
 import TechStack from "../Components/TechStach/TechStack";
 import Services from "../Components/Service/Service";
+import AboutSection from "../Components/AboutSection/AboutSection";
 
 gsap.registerPlugin(useGSAP);
 
@@ -73,6 +74,8 @@ const Home = () => {
       className="min-h-screen flex flex-col items-center justify-center bg-transparent"
     >
       <Hero />
+
+      <AboutSection/>
 
       <div className="relative min-h-screen w-full bg-transparent flex flex-col items-center pt-20 pb-24 font-sans">
         {/* ১. হেডার টেক্সট */}

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import robo from "../../assets/robot.jpg.png"
 
 const Contract = () => {
   const container = useRef();
@@ -25,7 +26,7 @@ const Contract = () => {
         <div className="contact-text text-center md:text-left flex flex-col items-center md:items-start">
           <div className="avatar-glow relative mb-6">
             <div className="absolute inset-0 bg-[color:var(--app-glow)] blur-3xl rounded-full scale-150"></div>
-            <img src="" className="relative w-32 h-32 sm:w-40 sm:h-40 z-10 rounded-full object-cover" alt="Avatar" />
+            <img src={robo} className="relative w-32 h-32 sm:w-40 sm:h-40 z-10 rounded-full object-cover " alt="Avatar" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">Got a project?</h2>
           <p className="text-[color:var(--app-muted)] max-w-xs">
@@ -51,7 +52,7 @@ const Contract = () => {
             <textarea placeholder="Message" className="w-full border-b border-[color:var(--app-border)] py-2 bg-transparent outline-none h-24" />
             <div className="flex justify-between items-center pt-4">
               <button className="text-sm flex items-center gap-2 text-[color:var(--app-muted)]">
-                ☁️ Upload file
+                {/* ☁️ Upload file */}
               </button>
               <button className="bg-[color:var(--app-accent)] hover:bg-[color:var(--app-accent-hover)] text-white px-6 py-2 rounded-full text-sm transition-colors">
                 Send Message
@@ -71,11 +72,11 @@ const Contract = () => {
           </div>
           <div className="footer-col">
             <h4 className="text-[color:var(--app-muted)] mb-4">Address</h4>
-            <p className="text-xs text-[color:var(--app-muted)]">123456 Newtown, New York</p>
+            <p className="text-xs text-[color:var(--app-muted)]">Mohammedpur, Dhaka-1207</p>
           </div>
           <div className="footer-col">
             <h4 className="text-[color:var(--app-muted)] mb-4">Any Question</h4>
-            <p className="text-xs text-[color:var(--app-muted)]">hey1@gmail.com</p>
+            <p className="text-xs text-[color:var(--app-muted)]">aponhasan972@gmail.com</p>
           </div>
           <div className="footer-col flex gap-4">
              {/* Social Icons */}

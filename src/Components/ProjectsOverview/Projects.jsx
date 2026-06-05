@@ -1,17 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
+import car from "../../assets/rentcar.png.png";
+
 
 // Temporary custom data array (you can later move this to a separate data file)
 const projectsData = [
   {
     id: 1,
-    title: "Rent Car",
-    description: "This project is about an online car rental platform.",
+    title: "Online Rent Car Platform",
+    description:
+      "A modern car rental platform dedicated to reliable vehicles and comfortable travel experiences",
+    image: car,
+    liveLink: `https://online-rentcar-platform.netlify.app/`,
+    skillTeach: ["React", "Firebase", "Tailwind", "Express", "Mongodb"],
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A modern portfolio to showcase my projects and skills.",
+    title: "Public-Infrastructure ",
+    description: "A modern platform to showcase public infrastructure projects. It provides detailed information, images, and locations. Designed to make infrastructure data easily accessible to everyone.",
+    image:'',
+    skillTeach: ["React", "Firebase", "Tailwind", "Express", "Mongodb", "DaisyUI"],
+    liveLink: `https://public-infrastructure-system.netlify.app/`,
+  },
+
+  {
+    id: 3,
+    title: "Online Shoping Platform",
+    description:"A modern e-commerce platform offering high-quality products with a smooth and convenient shopping experience.",
+    image: '',
+    liveLink: `https://my-app-seven-swart-35.vercel.app/`,
+    skillTeach: ["Next.js", "NextAuth", "Tailwind" ],
   },
 ];
 
@@ -32,14 +50,23 @@ const ProjectSection = ({ project, isReversed }) => {
             ${isReversed ? "md:col-span-7 md:col-start-6" : "md:col-span-7 md:col-start-1"}
           `}
         >
-          {/* Placeholder visual (replace with <img src={project.image} /> later) */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_var(--app-glow-strong)_0%,_transparent_55%),radial-gradient(circle_at_70%_70%,_var(--app-glow)_0%,_transparent_60%)] opacity-60" />
-          <div className="absolute inset-0 bg-[color:var(--app-surface-2)]" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-black/20" />
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
+          <div className="absolute inset-0 bg-black/20" />
           <div className="relative h-full w-full p-6 flex items-end">
-            <span className="text-sm font-medium text-[color:var(--app-muted)]">
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost btn-sm text-[color:var(--app-muted)] hover:text-[color:var(--app-fg)]"
+            >
               Preview
-            </span>
+            </a>
           </div>
         </motion.div>
 
@@ -55,38 +82,51 @@ const ProjectSection = ({ project, isReversed }) => {
             shadow-[0_26px_75px_rgba(0,0,0,0.55)]
             hover:shadow-[var(--app-card-hover-shadow)] hover:border-[color:var(--app-accent)]
             transition-shadow transition-border duration-300 ease-out
-            ${isReversed
-              ? "md:col-span-6 md:col-start-1 md:row-start-1 md:mr-[-56px]"
-              : "md:col-span-6 md:col-start-7 md:row-start-1 md:ml-[-56px]"}
+            ${
+              isReversed
+                ? "md:col-span-6 md:col-start-1 md:row-start-1 md:mr-[-56px]"
+                : "md:col-span-6 md:col-start-7 md:row-start-1 md:ml-[-56px]"
+            }
           `}
         >
           <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_0%_0%,_var(--app-glow)_0%,_transparent_55%),radial-gradient(circle_at_100%_100%,_var(--app-glow-strong)_0%,_transparent_60%)] opacity-60" />
           <div className="relative z-10">
-          <p className="text-[color:var(--app-accent)] font-medium tracking-[0.2em] text-xs uppercase mb-3">
-            Featured Project
-          </p>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[color:var(--app-fg)] tracking-tight">
-            {project.title}
-          </h3>
+            <p className="text-[color:var(--app-accent)] font-medium tracking-[0.2em] text-xs uppercase mb-3">
+              Featured Project
+            </p>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[color:var(--app-fg)] tracking-tight">
+              {project.title}
+            </h3>
 
-          <p className="mt-4 text-[color:var(--app-muted)] leading-relaxed text-base sm:text-[15px]">
-            {project.description}
-          </p>
+            <p className="mt-4 text-[color:var(--app-muted)] leading-relaxed text-base sm:text-[15px]">
+              {project.description}
+            </p>
 
-          <div className="flex gap-4 mt-7">
-            <button
-              type="button"
-              className="btn btn-ghost btn-sm text-[color:var(--app-muted)] hover:text-[color:var(--app-fg)]"
-            >
-              ✨
-            </button>
-            <button
-              type="button"
-              className="btn btn-ghost btn-sm text-[color:var(--app-muted)] hover:text-[color:var(--app-fg)]"
-            >
-              🖱️
-            </button>
-          </div>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {project.skillTeach?.map((skill, index) => (
+                <span
+                  key={index}
+                  className="text-xs px-3 py-1 rounded-full border border-[color:var(--app-border)] text-[color:var(--app-muted)]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            {/* <div className="flex gap-4 mt-7">
+              <button
+                type="button"
+                className="btn btn-ghost btn-sm text-[color:var(--app-muted)] hover:text-[color:var(--app-fg)]"
+              >
+                ✨
+              </button>
+              <button
+                type="button"
+                className="btn btn-ghost btn-sm text-[color:var(--app-muted)] hover:text-[color:var(--app-fg)]"
+              >
+                🖱️
+              </button>
+            </div> */}
           </div>
         </motion.div>
       </div>

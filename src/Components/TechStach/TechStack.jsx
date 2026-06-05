@@ -10,7 +10,7 @@ const TechStack = () => {
 
   const frontendSkills = [
     { name: "HTML5", level: "Expert" },
-    { name: "Next.JS", level: "Expert" },
+    { name: "Next.JS", level: "Intermediate" },
     { name: "Firbase", level: "Expert" },
     { name: "Tailwind Css", level: "Intermediate" },
     { name: "JavaScript", level: "Expert" },
